@@ -59,30 +59,64 @@
             color: var(--primary-color);
         }
         section {
-            padding: 4rem 0; /* Reduced top and bottom padding for compact layout */
+            padding: 1rem 0; /* Further reduced vertical padding */
             border-bottom: 1px solid var(--secondary-color);
         }
-        .hero {
-            text-align: center;
-            padding: 6rem 0 4rem 0; /* Reduced top and bottom padding for compact layout */
+        /* New styles for the merged introduction section */
+        #home {
+            display: flex;
+            align-items: center;
+            min-height: 50vh; /* Further reduced height */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
-        .hero h1 {
-            font-size: 3rem;
+        .home-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .home-text {
+            flex: 2;
+            max-width: 650px;
+        }
+        .home-text h1 {
+            font-size: 3.5rem;
             margin-bottom: 0.5rem;
         }
-        .hero p {
-            font-size: 1.2rem;
-            color: #bdc3c7; /* Lighter text for subtitle */
+        .home-text .subtitle {
+            font-size: 1.3rem;
+            color: #bdc3c7;
+            margin-bottom: 1.5rem;
         }
         .social-links a {
             color: var(--text-color);
-            margin: 0 1rem;
-            font-size: 1.5rem;
+            margin-right: 1.5rem;
+            font-size: 1.2rem;
             text-decoration: none;
+            font-weight: bold;
         }
         .social-links a:hover {
             color: var(--primary-color);
         }
+        .home-text .about-paragraph {
+            margin-top: 2rem;
+        }
+        .home-image {
+            flex: 1;
+            text-align: center;
+        }
+        .home-image img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 50%;
+            border: 4px solid var(--primary-color);
+        }
+        .home-image figcaption {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #bdc3c7;
+        }
+        /* General Styles from before */
         h2 {
             text-align: center;
             font-size: 2.5rem;
@@ -121,35 +155,24 @@
             text-align: center;
             padding: 2rem 0;
         }
-
-        /* Styles for the About Me section */
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-        .about-text {
-            flex: 2;
-        }
-        .about-image {
-            flex: 1;
-            text-align: center;
-            margin: 0;
-        }
-        .about-image img {
-            width: 100%;
-            max-width: 250px;
-            border-radius: 50%;
-            border: 3px solid var(--primary-color);
-        }
-        .about-image figcaption {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: #bdc3c7;
-        }
+        
+        /* Mobile Responsive Styles */
         @media (max-width: 768px) {
-            .about-content {
-                flex-direction: column;
+            .home-content {
+                flex-direction: column-reverse; /* Puts image on top on mobile */
+                text-align: center;
+            }
+            .home-text h1 {
+                font-size: 2.2rem;
+            }
+            section {
+                padding: 0.6rem 0;
+            }
+            .social-links {
+                text-align: center;
+            }
+            .social-links a {
+                margin: 0 0.75rem;
             }
         }
     </style>
@@ -164,7 +187,7 @@
             <nav>
                 <h1>Aayushi Gautam</h1>
                 <ul>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#home">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -174,29 +197,22 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <section id="home">
             <div class="container">
-                <h1>Aayushi Gautam</h1>
-                <p>Ph.D. Scholar in High-Performance Computing & Computer Systems</p>
-                <p>Seeking a challenging role in research and development.</p>
-                <div class="social-links">
-                    <a href="https://github.com/aayushi363" target="_blank" title="GitHub">GitHub</a>
-                    <a href="https://linkedin.com/in/aayushi-gautam-156bb9147" target="_blank" title="LinkedIn">LinkedIn</a>
-                    <a href="Resume (3).pdf" target="_blank">Resume</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            I am a motivated Ph.D. scholar at Northeastern University specializing in High-Performance Computing and Computer Systems. My research focuses on developing innovative debugging methodologies by combining checkpointing with model checking to efficiently diagnose concurrency bugs in multithreaded applications. With a strong foundation in C, C++, Python, and distributed systems, I am skilled in independent research, teamwork, and complex problem-solving. I am an active member of the Systems Research Group at NEU.
+                <div class="home-content">
+                    <div class="home-text">
+                        <h1>Aayushi Gautam</h1>
+                        <p class="subtitle">Ph.D. Scholar in High-Performance Computing & Computer Systems</p>
+                        <div class="social-links">
+                            <a href="https://github.com/aayushi363" target="_blank" title="GitHub">GitHub</a>
+                            <a href="https://linkedin.com/in/aayushi-gautam-156bb9147" target="_blank" title="LinkedIn">LinkedIn</a>
+                            <a href="Resume (3).pdf" target="_blank">Resume</a>
+                        </div>
+                        <p class="about-paragraph">
+                            I am a motivated Ph.D. scholar at Northeastern University specializing in High-Performance Computing. My research focuses on developing innovative debugging methodologies by combining checkpointing with model checking to efficiently diagnose concurrency bugs. I am an active member of the Systems Research Group at NEU.
                         </p>
                     </div>
-                    <figure class="about-image">
+                    <figure class="home-image">
                         <img src="profile.jpeg" alt="A photo of Aayushi Gautam">
                         <figcaption>
                             Outside of research, I enjoy hiking, photography, and exploring new coffee shops. Gardening is another favorite pastime, and I like to give my plants unique names—it adds a touch of personality and makes caring for them even more enjoyable. My current companions are two houseplants named <strong>Gajodhar</strong> and <strong>Lambodar</strong>.
@@ -268,7 +284,7 @@
         <section id="contact">
             <div class="container" style="text-align: center;">
                 <h2>Get In Touch</h2>
-                <p>I'm currently seeking new opportunities. Feel free to reach out!</p>
+                <p>I'm currently seeking Summer Internshipts 2026 opportunities. Feel free to reach out!</p>
                 <p><strong>Email:</strong> <a href="mailto:gautam.aa@northeastern.edu" style="color: var(--primary-color);">gautam.aa@northeastern.edu</a></p>
             </div>
         </section>
