@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayushi Gautam | PhD Scholar, High-Performance Computing</title>
+    <style>
+        :root {
+            --bg-color: #2c3e50; /* Dark Slate Blue */
+            --text-color: #ecf0f1; /* Light Gray */
+            --primary-color: #e67e22; /* Muted Orange */
+            --secondary-color: #34495e; /* Darker Slate */
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 2rem;
+        }
+        header {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0; padding: 0;
+            display: flex;
+        }
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 1rem;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        section {
+            padding: 6rem 0 2rem 0;
+            border-bottom: 1px solid var(--secondary-color);
+        }
+        .hero {
+            text-align: center;
+            padding: 8rem 0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #bdc3c7; /* Lighter text for subtitle */
+        }
+        .social-links a {
+            color: var(--text-color);
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        .card h3 { margin-top: 0; }
+        .card .tags {
+            margin-top: 1rem;
+        }
+        .card .tags span {
+            background: #4e5d6c;
+            padding: 0.3rem 0.6rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <h1>Aayushi Gautam</h1>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                [cite_start]<h1>Aayushi Gautam [cite: 4]</h1>
+                <p>Ph.D. [cite_start]Scholar in High-Performance Computing & Computer Systems [cite: 6, 9]</p>
+                [cite_start]<p>Seeking a challenging role in research and development. [cite: 7]</p>
+                <div class="social-links">
+                    [cite_start]<a href="https://github.com/aayushi363" target="_blank" title="GitHub">GitHub [cite: 5]</a>
+                    [cite_start]<a href="https://linkedin.com/in/aayushi-gautam-156bb9147" target="_blank" title="LinkedIn">LinkedIn [cite: 5]</a>
+                    <a href="Resume (3).pdf" target="_blank">Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    [cite_start]I am a motivated Ph.D. scholar at Northeastern University specializing in High-Performance Computing and Computer Systems. [cite: 6, 9] [cite_start]My research focuses on developing innovative debugging methodologies by combining checkpointing with model checking to efficiently diagnose concurrency bugs in multithreaded applications. [cite: 43] [cite_start]With a strong foundation in C, C++, Python, and distributed systems [cite: 16, 17][cite_start], I am skilled in independent research, teamwork, and complex problem-solving. [cite: 6] [cite_start]I am an active member of the Systems Research Group at NEU. [cite: 46]
+                </p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    <div class="card">
+                        <h3>DeepDebugging (Ongoing)</h3>
+                        [cite_start]<p>Developing an innovative debugging methodology that combines DMTCP checkpointing with McMini model checking to efficiently diagnose concurrency bugs in multithreaded applications. [cite: 43]</p>
+                        <div class="tags">
+                            <span>DMTCP</span><span>DPOR</span><span>Model Checking</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Transparently Checkpointing CUDA on GPUs</h3>
+                        [cite_start]<p>Developed a low-latency checkpointing system for NVIDIA GPUs using CUDA Runtime API and Unified Memory, enabling fault tolerance for HPC workloads on the Perlmutter supercomputer. [cite: 24, 25]</p>
+                        <div class="tags">
+                           <span>CUDA</span><span>Slurm</span><span>Cray MPI</span><span>HPC</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>DMTCP for RISC-V</h3>
+                        [cite_start]<p>Extended Distributed MultiThreaded CheckPointing (DMTCP) to RISC-V architectures using the GCC cross-compilation toolchain. [cite: 27]</p>
+                         <div class="tags">
+                           <span>DMTCP</span><span>RISC-V</span><span>GCC</span>
+                        </div>
+                    </div>
+                     <div class="card">
+                        <h3>Mini Model Checker</h3>
+                        [cite_start]<p>A Bounded Stateless Explicit-State Model Checker for Finding Deadlock and Assertion Errors in Multi-Threaded Software. [cite: 39, 40]</p>
+                         <div class="tags">
+                           <span>C++</span><span>Concurrency</span><span>Debugging</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="project-grid">
+                    <div class="card">
+                        [cite_start]<h3>Research Intern [cite: 20]</h3>
+                        [cite_start]<p><strong>Lawrence Berkeley National Laboratory (NERSC) [cite: 18]</strong></p>
+                        [cite_start]<p>June 2024 - Sep 2024 [cite: 19]</p>
+                    </div>
+                    <div class="card">
+                        [cite_start]<h3>Research Intern [cite: 22]</h3>
+                        [cite_start]<p><strong>RedHat [cite: 21]</strong></p>
+                        [cite_start]<p>June 2023 - Sep 2023 [cite: 21]</p>
+                    </div>
+                    <div class="card">
+                        <h3>Senior Project Technical Assistant</h3>
+                        [cite_start]<p><strong>Indian Institute of Technology, Bombay [cite: 33]</strong></p>
+                        [cite_start]<p>Sep 2021 - July 2022 [cite: 33]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container" style="text-align: center;">
+                <h2>Get In Touch</h2>
+                <p>I'm currently seeking new opportunities. Feel free to reach out!</p>
+                [cite_start]<p><strong>Email:</strong> <a href="mailto:gautam.aa@northeastern.edu" style="color: var(--primary-color);">gautam.aa@northeastern.edu [cite: 3]</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Aayushi Gautam</p>
+        </div>
+    </footer>
+
+</body>
+</html>
