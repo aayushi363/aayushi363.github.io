@@ -97,6 +97,13 @@
             border-radius: 8px;
         }
         .card h3 { margin-top: 0; }
+        .card h3 a {
+            color: var(--text-color); /* Maintain text color for linked title */
+            text-decoration: none;
+        }
+        .card h3 a:hover {
+            color: var(--primary-color); /* Highlight linked title on hover */
+        }
         .card .tags {
             margin-top: 1rem;
         }
@@ -110,6 +117,37 @@
         footer {
             text-align: center;
             padding: 2rem 0;
+        }
+
+        /* New styles for the About Me section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        .about-text {
+            flex: 2;
+        }
+        .about-image {
+            flex: 1;
+            text-align: center;
+            margin: 0;
+        }
+        .about-image img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+        }
+        .about-image figcaption {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #bdc3c7;
+        }
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -141,7 +179,7 @@
                 <div class="social-links">
                     <a href="https://github.com/aayushi363" target="_blank" title="GitHub">GitHub</a>
                     <a href="https://linkedin.com/in/aayushi-gautam-156bb9147" target="_blank" title="LinkedIn">LinkedIn</a>
-                    <a href="Resume (3).pdf" target="_blank">Download Resume</a>
+                    <a href="Resume (3).pdf" target="_blank">Resume</a>
                 </div>
             </div>
         </section>
@@ -149,9 +187,19 @@
         <section id="about">
             <div class="container">
                 <h2>About Me</h2>
-                <p>
-                    I am a motivated Ph.D. scholar at Northeastern University specializing in High-Performance Computing and Computer Systems. My research focuses on developing innovative debugging methodologies by combining checkpointing with model checking to efficiently diagnose concurrency bugs in multithreaded applications. With a strong foundation in C, C++, Python, and distributed systems, I am skilled in independent research, teamwork, and complex problem-solving. I am an active member of the Systems Research Group at NEU.
-                </p>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I am a motivated Ph.D. scholar at Northeastern University specializing in High-Performance Computing and Computer Systems. My research focuses on developing innovative debugging methodologies by combining checkpointing with model checking to efficiently diagnose concurrency bugs in multithreaded applications. With a strong foundation in C, C++, Python, and distributed systems, I am skilled in independent research, teamwork, and complex problem-solving. I am an active member of the Systems Research Group at NEU.
+                        </p>
+                    </div>
+                    <figure class="about-image">
+                        <img src="profile.jpg" alt="A photo of Aayushi Gautam">
+                        <figcaption>
+                            Outside of research, I enjoy hiking, photography, and exploring new coffee shops.
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
 
@@ -174,13 +222,13 @@
                         </div>
                     </div>
                     <div class="card">
-                        <h3>DMTCP for RISC-V</h3>
+                        <h3><a href="https://youtu.be/Nq1voYgPO1k?si=sQBQNeqChIvXsmzr" target="_blank">DMTCP for RISC-V</a></h3>
                         <p>Extended Distributed MultiThreaded CheckPointing (DMTCP) to RISC-V architectures using the GCC cross-compilation toolchain.</p>
                          <div class="tags">
                            <span>DMTCP</span><span>RISC-V</span><span>GCC</span>
                         </div>
                     </div>
-                     <div class="card">
+                    <div class="card">
                         <h3>Mini Model Checker</h3>
                         <p>A Bounded Stateless Explicit-State Model Checker for Finding Deadlock and Assertion Errors in Multi-Threaded Software.</p>
                          <div class="tags">
